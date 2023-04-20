@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CASA DE CAMBIO</title>
+    <script>
+        document.write("CASA DE CAMBIO<br/>");
+        document.write("Seleccionar moneda a cambiar:\t");
+        function muestaOpcion(){
+            var opciones = document.getElementsByName("eleccion");
+            console.log(opciones);
+            for(let i = 0; i <  opciones.length; i++){
+                if(opciones[i].checked){
+                    alert(opciones[i].value);
+                }
+            }
+        }
+        var num1 = parseInt(document.getElementById("num1").value);
+
+
+
+    </script>
+</head>
+<body>
+    <br><input type="radio" name="eleccion" value="opcion1" checked onclick="muestraOpcion()">Dólar<br>
+    <input type="radio" name="eleccion" value="opcion2" onclick="muestraOpcion()">Euro<br>
+    <form>
+        <input type="text" id="num1" /><br/>
+        <button type="button" onclick="mayorNum()">COTIZAR MI REY?</button>
+    </form>  
+</body>
+</html>
